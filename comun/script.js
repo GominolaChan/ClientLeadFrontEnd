@@ -24,6 +24,7 @@ const principalContent = document.getElementById('principalContent');
 const principalLoader = document.getElementById('principalLoader');
 
 
+
 if (id) {
 
     getProject()
@@ -46,7 +47,7 @@ async function getProject() {
             redirect: 'follow'
         };
 
-        const response = await fetch("http://localhost:1337/api/proyectos/" + id + "?populate=*", requestOptions);
+        const response = await fetch(urlBack + "/api/proyectos/" + id + "?populate=*", requestOptions);
         if (!response.ok) {
 
             window.location.href = '/page404.html'
@@ -138,7 +139,7 @@ async function createTask() {
             body: raw,
             redirect: 'follow'
         };
-        const response = await fetch("http://localhost:1337/api/tasks", requestOptions);
+        const response = await fetch(urlBack + "/api/tasks", requestOptions);
 
         if (!response.ok) {
             throw new Error('hay error en la peticion')
@@ -172,7 +173,7 @@ async function updateTask(id) {
             redirect: 'follow'
         };
 
-        const response = await fetch("http://localhost:1337/api/tasks/" + id, requestOptions)
+        const response = await fetch(urlBack + "/api/tasks/" + id, requestOptions)
         if (!response.ok) {
 
             throw new Error('hay error en la peticion')
@@ -202,7 +203,7 @@ async function deleteTask(id) {
             redirect: 'follow'
         };
 
-        const response = await fetch("http://localhost:1337/api/tasks/" + id, requestOptions)
+        const response = await fetch(urlBack + "/api/tasks/" + id, requestOptions)
         if (!response.ok) {
 
             throw new Error('hay error en la peticion')
@@ -216,3 +217,4 @@ async function deleteTask(id) {
         console.log(e)
     }
 }
+

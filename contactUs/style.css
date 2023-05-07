@@ -1,0 +1,16 @@
+body {
+  background: linear-gradient(to right, rgb(59, 130, 246), rgb(147, 51, 234));
+}
+
+.sizeLogo {
+  width: 100px;
+  height: 80px;
+}
+
+.foto {
+  min-width: 400px;
+  width: 50%;
+  height: 50%;
+  min-height: 400px;
+
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opiniones</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.15/tailwind.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header class="bg-gray-100 flex flex-col items-center justify-center w-full  ">
+    <!-- Navbar -->
+    <nav class=" flex justify-between    shadow-md w-full my-0 md:px-3 ">
+      <!-- Logo Container -->
+      <div class="flex items-center">
+
+        <a href="index.html" class="cursor-pointer flex items-center">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/clientlead-3ccf4.appspot.com/o/1new.png?alt=media&token=15f3ac0b-19a9-4815-85a9-7af74e50da1a"
+            alt="" class="sizeLogo">
+          <h3 class="text-2xl font-medium text-blue-500">
+
+            ClientLead
+          </h3>
+        </a>
+      </div>
+
+
+
+      <!-- Auth Links -->
+      <div class="flex items-center space-x-5 hidden md:flex me-8">
+
+        <a href="/team/team.html"
+          class="flex text-gray-600 hover:text-blue-500 text-xl cursor-pointer transition-colors duration-300">
+          Nuestro Equipo
+        </a>
+        <a href="/opinions/index.html"
+          class="flex text-gray-600 hover:text-blue-500 text-xl cursor-pointer transition-colors duration-300">
+          Opiniones
+
+        </a>
+
+        <a href="/contactUs/contactUs.html"
+          class="flex text-gray-600 hover:text-blue-500 text-xl cursor-pointer transition-colors duration-300">
+          Contacto
+        </a>
+      </div>
+
+
+    </nav>
+  </header>
+
+  <div class="w-screen mt-28 mb-20 flex justify-center items-center ">
+    <div class="bg-white rounded-lg shadow-lg p-6 max-w-md w-full  transform hover:scale-150 transition duration-500">
+      <h2 class="text-2xl font-bold mb-4">Deja un comentario</h2>
+      <form>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="name">
+            Nombre:
+          </label>
+          <input
+            class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="name" type="text" placeholder="Tu nombre">
+        </div>
+        <div class="mb-8">
+          <label class="block text-gray-700 font-bold mb-2" for="comment">
+            Comentario:
+          </label>
+          <textarea
+            class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="comment" placeholder="Deja aquí tu comentario"></textarea>
+        </div>
+        <button id="submit-btn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          type="button">
+          Enviar
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="py-16 white mb-36">
+    <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+      <h2 class="mb-12 text-center text-2xl text-gray-900 font-bold md:text-4xl">Vuestras Opiniones</h2>
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div id="comment-container" class="grid gap-8 md:grid-rows-2 lg:grid-cols-2"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

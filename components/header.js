@@ -2,40 +2,43 @@ let path = window.location.pathname;
 
 const header = document.getElementById('header');
 let text;
-async function headerr(){
+async function headerr() {
 
-    const response = await fetch('../components/header.html')
+  const response = await fetch('../components/header.html')
 
-     text = await response.text();
-    
-     switch (path) {
-        case '/developer/index.html':
+  text = await response.text();
 
-          header.innerHTML=text;
-          document.getElementById('endpointClient').classList.add('hidden');
-          document.getElementById('endpointComun').classList.add('hidden');
+  switch (path) {
+    case '/developer/index.html':
 
-
-          break;
-          case '/client/index.html':
-            header.innerHTML=text;
-            document.getElementById('endpointDeveloper').classList.add('hidden');
-            document.getElementById('endpointComun').classList.add('hidden');
-
-          break;
-        case '/comun/index.html':
-            header.innerHTML=text;
-            document.getElementById('endpointClient').classList.add('hidden');
-            document.getElementById('endpointDeveloper').classList.add('hidden');
-            document.getElementById('goBack').classList.remove('hidden');
+      header.innerHTML = text;
+      document.getElementById('endpointClient').classList.add('hidden');
+      document.getElementById('endpointComun').classList.add('hidden');
 
 
+      break;
+    case '/client/index.html':
+      header.innerHTML = text;
+      document.getElementById('endpointDeveloper').classList.add('hidden');
+      document.getElementById('endpointComun').classList.add('hidden');
 
+      break;
+    case '/contactUs/contactUs.html':
+      header.innerHTML = text;
+      document.getElementById('endpointDeveloper').classList.add('hidden');
+      document.getElementById('endpointComun').classList.add('hidden');
 
-          break;
-        default:
+      break;
+    case '/comun/index.html':
+      header.innerHTML = text;
+      document.getElementById('endpointClient').classList.add('hidden');
+      document.getElementById('endpointDeveloper').classList.add('hidden');
+      document.getElementById('goBack').classList.remove('hidden');
 
-          window.location.href='/page404.html'
-      }
+      break;
+    default:
+
+      window.location.href = '/page404.html'
+  }
 }
 headerr();
